@@ -36,5 +36,23 @@ class AppView extends View
      */
     public function initialize()
     {
+        parent::initialize();
+        $this->loadHelper('Html');
+        $this->loadHelper('Form');
+        $this->loadHelper('Flash');
+        $this->loadHelper('Common');
+        $this->loadHelper('Breadcrumb');
+        $this->loadHelper('SimpleForm');
+        $this->loadHelper('SimpleTable');
+        $this->loadHelper('Paginate');
+    }
+    
+    /**
+     * Read config
+     * 
+     * @param string $config_name
+     */
+    public function read_config($config_name = '') {
+        return Configure::read($config_name);
     }
 }
