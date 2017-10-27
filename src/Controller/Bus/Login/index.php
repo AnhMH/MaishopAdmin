@@ -62,6 +62,9 @@ if ($this->request->is('post')) {
             
             $user['is_admin'] = !empty($user['admin_type']) ? 1 : 0;
             $user['display_name'] = !empty($user['name']) ? $user['name'] : $user['login_id'];
+            if (empty($user['avatar'])) {
+                $user['avatar'] = $this->BASE_URL . '/img/' . Configure::read('default_avatar');
+            }
             $this->Auth->setUser($user);
             
             // Did they select the remember me checkbox?

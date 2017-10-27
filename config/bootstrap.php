@@ -245,3 +245,5 @@ define('DEFAULT_SITE_TITLE', 'VinaShop Admin');
 if (!defined('USE_SUB_DIRECTORY')) {
     define('USE_SUB_DIRECTORY', '');
 }
+
+Configure::write('default_avatar', 'avatar_default.png');

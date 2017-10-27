@@ -15,3 +15,30 @@ msgstr ""
 
 msgid "LABEL_LOGIN"
 msgstr "Đăng nhập"
+
+msgid "LABEL_SIGN_OUT"
+msgstr "Đăng xuất"
+
+msgid "LABEL_PROFILE"
+msgstr "Hồ sơ"
+
+msgid "LABEL_DASHBOARD"
+msgstr "Dashboard"
+
+msgid "LABEL_ORDER_MANAGEMENT"
+msgstr "Quản lý đơn hàng"
+
+msgid "LABEL_PRODUCT_MANAGEMENT"
+msgstr "Quản lý sản phẩm"
+
+msgid "LABEL_CUSTOMER_MANAGEMENT"
+msgstr "Quản lý khách hàng"
+
+msgid "LABEL_SUPPLIERS_MANAGEMENT"
+msgstr "Quản lý nhà cung cấp"
+
+msgid "LABEL_SETTING_MANAGEMENT"
+msgstr "Cài đặt"
+
+msgid "LABEL_UPDATE_PROFILE"
+msgstr "Cập nhật hồ sơ"

@@ -220,7 +220,7 @@ class AppController extends Controller
         } else if ($this->controller == 'ajax') {
             $this->viewBuilder()->layout('ajax');
         } else {
-            $this->viewBuilder()->layout('default');
+            $this->viewBuilder()->layout('vinashop');
         }
     }
     

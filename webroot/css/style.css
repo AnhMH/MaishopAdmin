@@ -20,12 +20,15 @@ a {
 img {
     max-width: 100%;
     height: auto;
-    display: block;
+    display: inline-block;
     border: none;
     vertical-align: top;
 }
 
 /******************************* Login Page **********************************/
+.login-image {
+    text-align: center;
+}
 .login-image img {
     width: 70%;
     margin: 40px auto 20px;
