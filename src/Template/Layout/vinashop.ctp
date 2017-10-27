@@ -23,6 +23,7 @@
         <![endif]-->
     </head>
     <body>
+        
         <div id="container" class="container_<?php echo $controller . '_' . $action; ?>">
             <?php echo $this->fetch('content'); ?>
         </div>
@@ -31,7 +32,14 @@
             var controller = '<?php echo $controller ?>';
             var action = '<?php echo $action ?>';
         </script>
+        
         <script type="text/javascript" src="<?php echo $BASE_URL ?>/js/jquery-2.1.3.min.js"></script>
+        <script type="text/javascript" src="<?php echo $BASE_URL ?>/js/jquery-migrate-1.4.1.min.js"></script>
         <script type="text/javascript" src="<?php echo $BASE_URL ?>/js/bootstrap.min.js?<?php echo VERSION_DATE ?>"></script>
+        
+        <script type="text/javascript" src="<?php echo $BASE_URL ?>/adminlte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <script type="text/javascript" src="<?php echo $BASE_URL ?>/adminlte/plugins/fastclick/fastclick.js"></script>
+        <script type="text/javascript" src="<?php echo $BASE_URL ?>/adminlte/dist/js/app.min.js"></script>
     </body>
 </html>
+

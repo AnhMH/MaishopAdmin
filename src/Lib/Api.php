@@ -6,6 +6,7 @@ use Cake\Core\Configure;
 use App\Lib\Log\AppLog;
 use Cake\Network\Session;
 use Cake\Network\Exception\InternalErrorException;
+use Cake\Routing\Router;
 
 /**
  * Call API
@@ -54,7 +55,7 @@ class Api {
             $ch = curl_init();
             $headers = array("Content-Type:multipart/form-data");
             if (!isset($requestData['unauthorize'])) {
-                $session = new Session();
+                $session = Router::getRequest(true)->session();
                 $auth = $session->read('Auth');
                 if (!empty($auth['User']->token)) {
                     $headers[] = "User-Id:" . $auth['User']->id;
@@ -83,7 +84,7 @@ class Api {
                 CURLOPT_HTTPHEADER => $headers,
                 CURLOPT_POSTFIELDS => $posts,
                 CURLOPT_RETURNTRANSFER => true,
-                CURLOPT_SAFE_UPLOAD => false,
+//                CURLOPT_SAFE_UPLOAD => false,
                 CURLOPT_SSL_VERIFYPEER => false,
                 CURLOPT_TIMEOUT => Configure::read('API.Timeout'),
                 CURLOPT_USERAGENT => env('HTTP_USER_AGENT'),

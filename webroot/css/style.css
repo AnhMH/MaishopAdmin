@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 100%;
+}
+
+body {
+    background: #fff;
+    color: #000;
+    overflow-x: hidden;
+}
+
+a {
+    outline: none !important;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: none;
+    vertical-align: top;
+}
+
+/******************************* Login Page **********************************/
+.login-image img {
+    width: 70%;
+    margin: 40px auto 20px;
+}
+.login-box .box-header {
+    text-align: center;
+}
+.login-box .text, .login-box .password {
+    position: relative;
+}
+.login-box input.form-control {
+    padding-right: 35px;
+}
+.login-box .text:after, .login-box .password:after {
+    content: "\2709";
+    font-family: "Glyphicons Halflings";
+    position: absolute;
+    right: 15px;
+    top: 7px;
+    color: #555;
+}
+.login-box .password:after {
+    content: "\e033";
+}

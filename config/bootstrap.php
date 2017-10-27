@@ -231,6 +231,8 @@ if (Configure::read('debug')) {
 /*
  * Custom
  */
+include_once ('apiurl.php');
+
 if ($env == 'production') {
     define('VERSION_DATE', date('Ymd'));
     include_once ('production/bootstrap.php');
@@ -239,7 +241,7 @@ if ($env == 'production') {
     include_once ('development/bootstrap.php');
 }
 
-define('DEFAULT_SITE_TITLE', 'Ameeplus');
+define('DEFAULT_SITE_TITLE', 'VinaShop Admin');
 if (!defined('USE_SUB_DIRECTORY')) {
     define('USE_SUB_DIRECTORY', '');
 }
