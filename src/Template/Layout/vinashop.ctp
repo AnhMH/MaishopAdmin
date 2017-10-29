@@ -35,17 +35,13 @@
 
             <div class="content-wrapper">
                 <section class="content-header">
-                    <h1>
-                        Dashboard
-                        <small>Control panel</small>
-                    </h1>
-                    <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li class="active">Dashboard</li>
-                    </ol>
+                    <?php if (!empty($breadcrumb)) : ?>
+                        <?php echo $this->Breadcrumb->render($breadcrumb, $breadcrumbTitle); ?>
+                    <?php endif ?>
                 </section>
                 
                 <section class="content">
+                    <?php echo $this->Flash->render() ?>
                     <?php echo $this->fetch('content'); ?>
                 </section>
             </div>

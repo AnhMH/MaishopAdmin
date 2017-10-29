@@ -57,9 +57,9 @@ class Api {
             if (!isset($requestData['unauthorize'])) {
                 $session = Router::getRequest(true)->session();
                 $auth = $session->read('Auth');
-                if (!empty($auth['User']->token)) {
-                    $headers[] = "User-Id:" . $auth['User']->id;
-                    $headers[] = "Authorization:" . $auth['User']->token;
+                if (!empty($auth['User']['token'])) {
+                    $headers[] = "User-Id:" . $auth['User']['id'];
+                    $headers[] = "Authorization:" . $auth['User']['token'];
                 }
             }
             if ($json === true) {
@@ -69,7 +69,7 @@ class Api {
             $posts = array();
             if (!empty($requestData)) {
                 foreach ($requestData as $key => $value) {
-                    if (is_scalar($value) || $value instanceof CurlFile) {
+                    if (is_scalar($value) || $value instanceof \CurlFile) {
                         $posts[$key] = $value;
                     }
                 }

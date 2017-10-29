@@ -24,6 +24,7 @@
     </head>
     <body>
         <div id="container" class="container_<?php echo $controller . '_' . $action; ?>">
+            <?php echo $this->Flash->render() ?>
             <?php echo $this->fetch('content'); ?>
         </div>
         

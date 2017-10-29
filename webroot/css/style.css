@@ -25,6 +25,21 @@ img {
     vertical-align: top;
 }
 
+.main-sidebar {
+    position: fixed;
+}
+.message {
+    padding: 10px 0;
+    color: #fff;
+}
+.message.success {
+    background-color: #00a65a !important;
+}
+.button-group .form-group {
+    display: inline-block;
+    margin-right: 20px;
+}
+
 /******************************* Login Page **********************************/
 .login-image {
     text-align: center;

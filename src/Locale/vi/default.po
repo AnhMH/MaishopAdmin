@@ -42,3 +42,36 @@ msgstr "Cài đặt"
 
 msgid "LABEL_UPDATE_PROFILE"
 msgstr "Cập nhật hồ sơ"
+
+msgid "LABEL_HOME"
+msgstr "Trang chủ"
+
+msgid "LABEL_ACCOUNT"
+msgstr "Tài khoản"
+
+msgid "LABEL_NAME"
+msgstr "Tên"
+
+msgid "LABEL_EMAIL"
+msgstr "Email"
+
+msgid "LABEL_TEL"
+msgstr "Số điện thoại"
+
+msgid "LABEL_ADDRESS"
+msgstr "Địa chỉ"
+
+msgid "LABEL_AVATAR"
+msgstr "Hình đại diện"
+
+msgid "LABEL_WEBSITE"
+msgstr "Website"
+
+msgid "LABEL_FACEBOOK"
+msgstr "Facebook"
+
+msgid "LABEL_SAVE"
+msgstr "Lưu"
+
+msgid "LABEL_CANCEL"
+msgstr "Hủy"
