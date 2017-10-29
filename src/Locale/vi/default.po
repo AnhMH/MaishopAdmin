@@ -75,3 +75,30 @@ msgstr "Lưu"
 
 msgid "LABEL_CANCEL"
 msgstr "Hủy"
+
+msgid "LABEL_CREATED"
+msgstr "Ngày tạo"
+
+msgid "LABEL_EDIT"
+msgstr "Sửa"
+
+msgid "LABEL_DELETE"
+msgstr "Xóa"
+
+msgid "LABEL_SEARCH"
+msgstr "Tìm kiếm"
+
+msgid "LABEL_ADD_NEW"
+msgstr "Thêm mới"
+
+msgid "LABEL_ENABLE"
+msgstr "Khôi phục"
+
+msgid "LABEL_LIMIT"
+msgstr "Số lượng hiển thị"
+
+msgid "LABEL_CUSTOMER_LIST"
+msgstr "Danh sách khách hàng"
+
+msgid "MESSAGE_UPDATE_SUCCESSFULLY"
+msgstr "Cập nhật thành công"

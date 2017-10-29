@@ -233,6 +233,16 @@ if (Configure::read('debug')) {
  */
 include_once ('apiurl.php');
 
+Configure::write('default_avatar', 'avatar_default.png');
+Configure::write('Config.PageSize', 20);
+Configure::write('Config.searchPageSize', array(
+    10 => 10,
+    20 => 20,
+    50 => 50,
+    80 => 80,
+    100 => 100,
+));
+
 if ($env == 'production') {
     define('VERSION_DATE', date('Ymd'));
     include_once ('production/bootstrap.php');
@@ -245,5 +255,3 @@ define('DEFAULT_SITE_TITLE', 'VinaShop Admin');
 if (!defined('USE_SUB_DIRECTORY')) {
     define('USE_SUB_DIRECTORY', '');
 }
-
-Configure::write('default_avatar', 'avatar_default.png');

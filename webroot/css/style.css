@@ -39,6 +39,9 @@ img {
     display: inline-block;
     margin-right: 20px;
 }
+.content-wrapper .box-result {
+    overflow: auto;
+}
 
 /******************************* Login Page **********************************/
 .login-image {

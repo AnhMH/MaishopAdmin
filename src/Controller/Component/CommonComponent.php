@@ -52,15 +52,15 @@ class CommonComponent extends AppComponent {
             return false;
         }
         if ($onlyDate == true) {
-            return date('Y年m月d日', $time);
+            return date('Y-m-d', $time);
         }
         $minuteAgo = ceil((time() - $time) / 60);
         if ($minuteAgo > 0 && $minuteAgo < 60) {
-            return str_pad($minuteAgo, 2, '0', STR_PAD_LEFT) . "分前";
+            return str_pad($minuteAgo, 2, '0', STR_PAD_LEFT) . " phút trước";
         } elseif ($minuteAgo > 0 && $minuteAgo < 24 * 60) {
-            return str_pad(ceil($minuteAgo / 60), 2, '0', STR_PAD_LEFT) . "時間前";
+            return str_pad(ceil($minuteAgo / 60), 2, '0', STR_PAD_LEFT) . " giờ trước";
         }
-        return date('Y年m月d日', $time);
+        return date('Y-m-d', $time);
     }
     
     /**
