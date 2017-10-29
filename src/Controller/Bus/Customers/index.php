@@ -97,6 +97,12 @@ $this->SimpleTable
             'empty' => ''
         ))
         ->addColumn(array(
+            'id' => 'order_count',
+            'title' => __('LABEL_ORDER_COUNT'),
+            'width' => 150,
+            'empty' => 0
+        ))
+        ->addColumn(array(
             'id' => 'created',
             'type' => 'dateonly',
             'title' => __('LABEL_CREATED'),

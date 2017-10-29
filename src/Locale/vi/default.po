@@ -132,3 +132,6 @@ msgstr "Đã xóa"
 
 msgid "LABEL_PAGING_SUMARY"
 msgstr "Hiển thị %s ~ %s của tổng số %s"
+
+msgid "LABEL_ORDER_COUNT"
+msgstr "Số lần đặt hàng"
