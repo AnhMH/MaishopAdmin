@@ -15,4 +15,11 @@ class CustomersController extends AppController {
     public function index() {
         include ('Bus/Customers/index.php');
     }
+    
+    /**
+     * Add/update info
+     */
+    public function update($id = '') {
+        include ('Bus/Customers/update.php');
+    }
 }

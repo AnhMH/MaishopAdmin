@@ -102,3 +102,21 @@ msgstr "Danh sách khách hàng"
 
 msgid "MESSAGE_UPDATE_SUCCESSFULLY"
 msgstr "Cập nhật thành công"
+
+msgid "LABEL_NOTE"
+msgstr "Ghi chú"
+
+msgid "MESSAGE_REQUIRED_NAME"
+msgstr "Vui lòng nhập tên"
+
+msgid "MESSAGE_INVALID_EMAIL_FORMAT"
+msgstr "Email không đúng"
+
+msgid "MESSAGE_SAVE_OK"
+msgstr "Lưu dữ liệu thành công"
+
+msgid "MESSAGE_SAVE_NG"
+msgstr "Không thể lưu dữ liệu"
+
+msgid "LABEL_CUSTOMER_UPDATE"
+msgstr "Cập nhật thông tin khách hàng"

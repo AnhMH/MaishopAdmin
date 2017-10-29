@@ -58,6 +58,8 @@
             var controller = '<?php echo $controller; ?>';
             var action = '<?php echo $action; ?>';
             var baseUrl = '<?php echo $BASE_URL; ?>';
+            var referer = "<?php echo $referer; ?>";
+            var url = "<?php echo $url; ?>";
         </script>
 
         <script type="text/javascript" src="<?php echo $BASE_URL ?>/js/jquery-2.1.3.min.js"></script>

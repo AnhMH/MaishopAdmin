@@ -343,5 +343,7 @@ return [
      */
     'Session' => [
         'defaults' => 'php',
+        'cookie' => 'VNShopCookie',
+        'timeout' => 24*60, // 1day
     ],
 ];

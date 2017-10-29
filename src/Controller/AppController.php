@@ -110,6 +110,7 @@ class AppController extends Controller
         $this->current_url = Router::url($this->here, true);
         $this->BASE_URL = Router::fullBaseUrl() . USE_SUB_DIRECTORY;
         $this->BASE_URL_FRONT = Configure::read('Front.Host');
+        
         // Redirect Auth
         if ($this->isAuthorized()) {
             if ($this->controller == 'login' && $this->action == 'index') {
