@@ -66,9 +66,9 @@ class PaginateHelper extends AppHelper {
             $start = 1;
             $end = $totalPage;
         }
-        $html = '<div class="dataTables_paginate paging_bootstrap fr">';
+        $html = '<div class="dataTables_paginate paging_bootstrap">';
         if ($total > $limit) {
-            $sumary = sprintf(__('LABEL_PAGING_SUMARY'), $total, ($page - 1) * $limit + 1, min($page * $limit, $total));
+            $sumary = sprintf(__('LABEL_PAGING_SUMARY'), ($page - 1) * $limit + 1, min($page * $limit, $total), $total);
             $html .= "<div class=\"paging_sumary\">{$sumary}</div>";
         }
         $html .='<ul class="pagination">';

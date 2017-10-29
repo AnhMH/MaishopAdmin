@@ -29,8 +29,9 @@ img {
     position: fixed;
 }
 .message {
-    padding: 10px 0;
+    padding: 10px;
     color: #fff;
+    margin: 10px 0;
 }
 .message.success {
     background-color: #00a65a !important;
@@ -41,6 +42,11 @@ img {
 }
 .content-wrapper .box-result {
     overflow: auto;
+}
+.toggle-off {
+    background-color: #dd4b39 !important;
+    border-color: #d73925 !important;
+    color: #fff !important;
 }
 
 /******************************* Login Page **********************************/

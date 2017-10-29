@@ -42,6 +42,12 @@ $this->SearchForm
             'options' => Configure::read('Config.searchPageSize'),
         ))
         ->addElement(array(
+            'id' => 'disable',
+            'label' => __('LABEL_STATUS'),
+            'options' => Configure::read('Config.searchStatus'),
+            'empty' => 0
+        ))
+        ->addElement(array(
             'type' => 'submit',
             'value' => __('LABEL_SEARCH'),
             'class' => 'btn btn-primary',
@@ -102,39 +108,44 @@ $this->SimpleTable
             'title' => __('LABEL_EDIT'),
             'href' => $this->BASE_URL . '/' . $this->controller . '/update/{id}',
             'button' => true,
-            'width' => 100,
-        ))
-        ->addColumn(array(
-            'id' => 'disable',
-            'type' => 'checkbox',
-            'title' => __('LABEL_DELETE'),
-            'toggle' => true,
-            'toggle-onstyle' => "danger",
-            'toggle-options' => array(
-                "data-on" => __("LABEL_DELETE"),
-            ),
-            'rules' => array(
-                '0' => '',
-                '1' => 'checked'
-            ),
-            'empty' => 0,
             'width' => 50,
         ))
+//        ->addColumn(array(
+//            'id' => 'disable',
+//            'type' => 'checkbox',
+//            'title' => __('LABEL_DELETE'),
+//            'toggle' => true,
+//            'toggle-onstyle' => "primary",
+//            'toggle-offstyle' => "danger",
+//            'toggle-options' => array(
+//                "data-on" => __("LABEL_ENABLE"),
+//                "data-off" => __("LABEL_DELETE"),
+//            ),
+//            'rules' => array(
+//                '0' => '',
+//                '1' => 'checked'
+//            ),
+//            'empty' => 0,
+//            'width' => 50,
+//        ))
         ->addButton(array(
             'type' => 'submit',
             'value' => __('LABEL_ADD_NEW'),
             'class' => 'btn btn-success btn-addnew',
-        ))
-        ->addButton(array(
-            'type' => 'submit',
-            'value' => __('LABEL_DELETE'),
-            'class' => 'btn btn-danger btn-disable',
-        ))
-        ->addButton(array(
+        ));
+if (!empty($param['disable'])) {
+    $this->SimpleTable->addButton(array(
             'type' => 'submit',
             'value' => __('LABEL_ENABLE'),
             'class' => 'btn asds btn-primary btn-enable',
         ));
+} else {
+    $this->SimpleTable->addButton(array(
+            'type' => 'submit',
+            'value' => __('LABEL_DELETE'),
+            'class' => 'btn btn-danger btn-disable',
+        ));
+} 
 
 $this->set('pageTitle', $pageTitle);
 $this->set('total', $total);

@@ -91,10 +91,10 @@ if ($this->request->is('post')) {
     // Validation
     if ($form->validate($data)) {
         // Call API
-        $result = Api::call(Configure::read('API.url_customers_addupdate'), $data);
-        if (!empty($result) && !Api::getError()) {            
+        $id = Api::call(Configure::read('API.url_customers_addupdate'), $data);
+        if (!empty($id) && !Api::getError()) {            
             $this->Flash->success(__('MESSAGE_SAVE_OK'));
-//            return $this->redirect("{$this->BASE_URL}/{$this->controller}");
+            return $this->redirect("{$this->BASE_URL}/{$this->controller}/update/{$id}");
         } else {
             return $this->Flash->error(__('MESSAGE_SAVE_NG'));
         }

@@ -74,7 +74,7 @@ msgid "LABEL_SAVE"
 msgstr "Lưu"
 
 msgid "LABEL_CANCEL"
-msgstr "Hủy"
+msgstr "Quay lại"
 
 msgid "LABEL_CREATED"
 msgstr "Ngày tạo"
@@ -120,3 +120,15 @@ msgstr "Không thể lưu dữ liệu"
 
 msgid "LABEL_CUSTOMER_UPDATE"
 msgstr "Cập nhật thông tin khách hàng"
+
+msgid "LABEL_STATUS"
+msgstr "Trạng thái"
+
+msgid "LABEL_ACTIVE"
+msgstr "Hoạt động"
+
+msgid "LABEL_INACTIVE"
+msgstr "Đã xóa"
+
+msgid "LABEL_PAGING_SUMARY"
+msgstr "Hiển thị %s ~ %s của tổng số %s"

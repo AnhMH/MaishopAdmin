@@ -234,13 +234,17 @@ if (Configure::read('debug')) {
 include_once ('apiurl.php');
 
 Configure::write('default_avatar', 'avatar_default.png');
-Configure::write('Config.PageSize', 20);
+Configure::write('Config.PageSize', 10);
 Configure::write('Config.searchPageSize', array(
     10 => 10,
     20 => 20,
     50 => 50,
     80 => 80,
     100 => 100,
+));
+Configure::write('Config.searchStatus', array(
+    0 => __('LABEL_ACTIVE'),
+    1 => __('LABEL_INACTIVE'),
 ));
 
 if ($env == 'production') {
