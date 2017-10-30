@@ -15,4 +15,11 @@ class SuppliersController extends AppController {
     public function index() {
         include ('Bus/Suppliers/index.php');
     }
+    
+    /**
+     * Add/update info
+     */
+    public function update($id = '') {
+        include ('Bus/Suppliers/update.php');
+    }
 }

@@ -36,6 +36,9 @@ img {
 .message.success {
     background-color: #00a65a !important;
 }
+.message.error {
+    background-color: #dd4b39 !important;
+}
 .button-group .form-group {
     display: inline-block;
     margin-right: 20px;

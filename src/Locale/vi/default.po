@@ -135,3 +135,12 @@ msgstr "Hiển thị %s ~ %s của tổng số %s"
 
 msgid "LABEL_ORDER_COUNT"
 msgstr "Số lần đặt hàng"
+
+msgid "LABEL_PASSWORD"
+msgstr "Mật khẩu"
+
+msgid "LABEL_SUPPLIER_LIST"
+msgstr "Danh sách nhà cung cấp"
+
+msgid "LABEL_SUPPLIER_UPDATE"
+msgstr "Cập nhật nhà cung cấp"
