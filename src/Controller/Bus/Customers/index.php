@@ -58,7 +58,7 @@ $param = $this->getParams(array(
     'disable' => 0
 ));
 
-$result = Api::call(Configure::read('API.user_customers_list'), $param);
+$result = Api::call(Configure::read('API.url_customers_list'), $param);
 $total = !empty($result['total']) ? $result['total'] : 0;
 $data = !empty($result['data']) ? $result['data'] : array();
 

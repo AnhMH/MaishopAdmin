@@ -15,4 +15,11 @@ class ProductsController extends AppController {
     public function index() {
         include ('Bus/Products/index.php');
     }
+    
+    /**
+     * Add/update info
+     */
+    public function update($id = '') {
+        include ('Bus/Products/update.php');
+    }
 }
