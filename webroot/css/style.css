@@ -80,3 +80,12 @@ img {
 .login-box .password:after {
     content: "\e033";
 }
+
+/************************ Order page ************************/
+.product_detail {
+    text-align: center;
+}
+.cate_wrapper select {
+    width: 100%;
+    padding: 10px;
+}
