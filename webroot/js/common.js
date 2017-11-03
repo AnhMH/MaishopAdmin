@@ -28,6 +28,9 @@ $(document).ready(function ($) {
         location.href = baseUrl + '/' + controller + '/update';
         return false;
     });
+
+    // Order
+    init_order();
 });
 
 /**
@@ -126,7 +129,7 @@ function toggleChange(item) {
                     showAlertModal(response);
                 }
             },
-            complete: function(){
+            complete: function () {
                 location.reload();
             }
         });
@@ -175,6 +178,69 @@ function is_image_type(input) {
  * @param {type} self
  * @returns {Boolean}
  */
-function onlyUnique(value, index, self) { 
+function onlyUnique(value, index, self) {
     return self.indexOf(value) === index;
+}
+
+/*
+ * order functions
+ */
+function init_order() {
+    var product = $('.product_detail');
+    var cartContent = $('#cart_content');
+    var delBtn = $('.c_item .btn-danger');
+    var pItem = $('.product_detail');
+    
+    $('#cateList').on('change', function(){
+        var value = $(this).val();
+        if (value == '') {
+            pItem.show();
+        } else {
+            pItem.hide();
+            $('.product_wrapper').find("[data-cate-id='" + value + "']").show();
+        }
+    });
+    
+    $('#search_product_name').on('keyup', function(){
+        var value = $(this).val();
+        if (value == '') {
+            pItem.show();
+        } else {
+            pItem.hide();
+            $('.product_wrapper').find("[data-name*='" + value + "']").show();
+        }
+    });
+    
+    product.unbind('click').bind('click', function () {
+        var id = $(this).attr('data-id');
+        var name = $(this).attr('data-name');
+        var price = $(this).attr('data-price');
+        var existItem = $("#cart_content").find("[data-p-id='" + id + "']");
+        if (existItem.length > 0) {
+            var qty = parseInt(existItem.find('.input_number').val());
+            existItem.find('.input_number').val(qty + 1);
+            existItem.find('.item_total_price').html(price*(qty + 1));
+        } else {
+            var item = item_render(id, name, price);
+            cartContent.prepend(item);
+        }
+    });
+    
+    delBtn.unbind('click').bind('click', function () {
+        $(this).parents('.c_item').remove();
+    });
+}
+
+/*
+ * Render item
+ */
+function item_render(id, name, price) {
+    return '<tr class="c_item" data-p-id="' + id + '"><td>' + name + '</td><td><input type="number" class="form-control input_number" value="1" min="1"/></td><td>'+price+'</td><td class="item_total_price">'+price+'</td><td><button onclick="remove_item($(this))" class="btn btn-xs btn-danger"><i class="fa fa-trash-o"></i></button></td></tr>';
+}
+
+/*
+ * Remove item
+ */
+function remove_item(btn) {
+    btn.parents('.c_item').remove();
 }

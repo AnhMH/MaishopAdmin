@@ -36,11 +36,11 @@
             <!-- End Sidebar -->
 
             <div class="content-wrapper">
-                <section class="content-header">
-                    <?php if (!empty($breadcrumb)) : ?>
+                <?php if (!empty($breadcrumb)) : ?>
+                    <section class="content-header">
                         <?php echo $this->Breadcrumb->render($breadcrumb, $breadcrumbTitle); ?>
-                    <?php endif ?>
-                </section>
+                    </section>
+                <?php endif ?>
                 
                 <section class="content">
                     <?php echo $this->Flash->render() ?>

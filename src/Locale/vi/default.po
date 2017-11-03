@@ -159,3 +159,18 @@ msgstr "Giảm giá(%)"
 
 msgid "LABEL_DESCRIPTION"
 msgstr "Mô tả"
+
+msgid "LABEL_CATEGORY_LIST"
+msgstr "Danh sách danh mục"
+
+msgid "LABEL_CATEGORY"
+msgstr "Danh mục"
+
+msgid "LABEL_PRODUCT"
+msgstr "Sản phẩm"
+
+msgid "LABEL_QTY"
+msgstr "Số lượng"
+
+msgid "LABEL_CART_SUB_TOTAL"
+msgstr "Thành tiền"
