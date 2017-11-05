@@ -24,7 +24,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body id="container_<?php echo $controller . '_' . $action; ?>" class="skin-blue sidebar-mini">
+    <body id="container_<?php echo $controller . '_' . $action; ?>" class="skin-blue sidebar-mini sidebar-collapse">
 
         <div id="wrapper">
             <!-- Start Header -->

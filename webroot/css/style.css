@@ -90,6 +90,11 @@ td, th {
     height: 100%;
     overflow: auto;
 }
+.product_wrapper {
+    float: left;
+    overflow: auto;
+    height: 300px;
+}
 .product_detail {
     text-align: center;
     cursor: pointer;
@@ -104,4 +109,35 @@ td, th {
     background: #ececec;
     width: 100%;
     margin-top: 50px;
+}
+.cart_wrapper {
+    height: 403px;
+    overflow: auto;
+}
+.customer_search {
+    position: relative;
+}
+.customer_search_result {
+    width: 100%;
+    position: absolute;
+    top: 34px;
+    background: #fff;
+    border: 1px solid #ccc;
+    display: none;
+    max-height: 200px;
+    overflow: auto;
+}
+.customer_search_result li {
+    list-style: none;
+    padding: 10px 10px 10px 20px;
+    border-bottom: 1px dashed #ccc;
+}
+.customer_search_result li:hover {
+    cursor: pointer;
+}
+.customer_search_result li:last-of-type {
+    border: none;
+}
+.customer_info {
+    display: none;
 }
