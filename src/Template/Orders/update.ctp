@@ -21,7 +21,7 @@
                     <?php for ($i = 1; $i <= 20; $i++): ?>
                         <div data-cate-id="<?php echo $i; ?>" 
                              data-id="<?php echo $i; ?>" 
-                             data-name="San pham <?php echo $i; ?>"
+                             data-name="<?php echo strtolower('San pham ' . $i); ?>"
                              data-price="<?php echo $i; ?>23456" class="col-xs-6 col-md-4 product_detail">
                             <img src="<?php echo $BASE_URL; ?>/img/sp.jpg" alt=""/>
                             <h4 class="product_name">San pham <?php echo $i; ?></h4>
@@ -68,11 +68,11 @@
                     </div>
                     <div class="customer_info">
                         <div class="form-group">
-                            <label>Ho ten</label>
+                            <label><?php echo __('LABEL_FULL_NAME');?></label>
                             <input class="form-control customer_info_input" placeholder="Ho ten..." id="customer_name" value="" disabled="disabled"/>
                         </div>
                         <div class="form-group">
-                            <label>So dien thoai</label>
+                            <label><?php echo __('LABEL_TEL');?></label>
                             <input class="form-control customer_info_input" placeholder="So dien thoai..." id="customer_tel" value="" disabled="disabled"/>
                         </div>
                         <div class="form-group">

@@ -22,4 +22,11 @@ class OrdersController extends AppController {
     public function update($id = '') {
         include ('Bus/Orders/update.php');
     }
+    
+    /**
+     * Orders add/update
+     */
+    public function add() {
+        include ('Bus/Orders/add.php');
+    }
 }

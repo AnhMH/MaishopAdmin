@@ -174,3 +174,48 @@ msgstr "Số lượng"
 
 msgid "LABEL_CART_SUB_TOTAL"
 msgstr "Thành tiền"
+
+msgid "MESSAGE_SEARCH_NO_RESULT"
+msgstr "Không tìm thấy kết qủa phù hợp"
+
+msgid "LABEL_PAYMENT_INFO"
+msgstr "Thông tin thanh toán"
+
+msgid "LABEL_PAYMENT_METHOD"
+msgstr "Phương thức"
+
+msgid "LABEL_PAYMENT_METHOD_CASH_ON_DELIVERY"
+msgstr "Tiền mặt"
+
+msgid "LABEL_PAYMENT_METHOD_BANK_TRANFER"
+msgstr "Chuyển khoản"
+
+msgid "LABEL_ORDER_TOTAL"
+msgstr "Tổng tiền"
+
+msgid "LABEL_PAY_TOTAL"
+msgstr "Đã thanh toán"
+
+msgid "LABEL_PAY_DEBT"
+msgstr "Còn nợ"
+
+msgid "LABEL_ORDER_SAVE"
+msgstr "Lưu hóa đơn"
+
+msgid "LABEL_ADD_NEW_CUSTOMER"
+msgstr "Thêm mới khách hàng"
+
+msgid "LABEL_PLACEHOLDER_CUSTOMER_INPUT"
+msgstr "Nhập tên hoặc số điện thoại khách hàng"
+
+msgid "LABEL_ORDER_INFO"
+msgstr "Thông tin đơn hàng"
+
+msgid "LABEL_PLACEHOLDER_SEARCH_PRODUCT"
+msgstr "Nhập tên sản phẩm cần tìm"
+
+msgid "LABEL_PRODUCT_INFO"
+msgstr "Thông tin sản phẩm"
+
+msgid "LABEL_PLACEHOLDER_NOTE"
+msgstr "Ghi chú..."
