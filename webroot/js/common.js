@@ -225,8 +225,8 @@ function init_order() {
             cartContent.prepend(item);
         }
         order_calculate();
-        
-        $('.input_number').unbind('change').bind('change', function(){
+
+        $('.input_number').unbind('change').bind('change', function () {
             var value = parseInt($(this).val());
             var parent = $(this).parents('.c_item');
             var price = parseInt(parent.find('.item_price').html());
@@ -240,6 +240,8 @@ function init_order() {
     });
 
     select_customer();
+
+    order_save();
 }
 
 /*
@@ -269,29 +271,32 @@ function select_customer() {
     var input_name = $('#o_customer_name');
     var input_tel = $('#o_customer_tel');
     var input_address = $('#o_customer_address');
+    var input_id = $('#o_customer_id');
     var c_input = $('.customer_info_input');
     var btn_add_new_customer = $('#add_new_customer');
-    
-    input.on('keyup', function() {
+
+    input.on('keyup', function () {
         show_customer();
     });
-    input.on('click', function() {
+    input.on('click', function () {
         show_customer();
     });
     item.unbind('click').bind('click', function () {
         var address = $(this).attr('data-address');
         var tel = $(this).attr('data-tel');
         var name = $(this).attr('data-name');
-        
+        var id = $(this).attr('data-id');
+
         input.val('');
+        input_id.val(id);
         input_name.val(name);
         input_tel.val(tel);
         input_address.val(address);
         c_wrapper.hide();
         c_info.show();
     });
-    
-    btn_add_new_customer.on('click', function(){
+
+    btn_add_new_customer.on('click', function () {
         c_input.attr('disabled', false);
         c_input.val('');
         c_info.show();
@@ -328,18 +333,48 @@ function order_calculate() {
     var td_total = $('.order_total');
     var qty = 0;
     var total = 0;
-    $('.item_total_price').each(function(){
+    $('.item_total_price').each(function () {
         var value = parseInt($(this).html());
         total += value;
     });
-    $('.input_number').each(function(){
+    $('.input_number').each(function () {
         var value = parseInt($(this).val());
         qty += value;
     });
-    
+
     td_total.html(total);
     td_qtv.html(qty);
     $('#o_total_price').val(total);
+}
+
+/*
+ * Save order data
+ */
+function order_save() {
+    $('#order_save').on('click', function () {
+        var data = {
+            product_ids: $('#o_product_ids').val(),
+            customer_id: $('#o_customer_id').val(),
+            payment_method: $('#o_payment_method').val(),
+            total_price: $('#o_total_price').val(),
+            pay_total: $('#o_pay_total').val(),
+            pay_debt: $('#o_pay_debt').val(),
+        };
+        $.ajax({
+            type: "POST",
+            url: baseUrl + '/ajax/orderadd',
+            data: data,
+            success: function (response) {
+                if (response) {
+                    // Show error
+                    showAlertModal(response);
+                }
+            },
+            complete: function () {
+                location.reload();
+            }
+        });
+    });
 }
 
 $(document).on('click touchend', function (e) {

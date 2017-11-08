@@ -150,11 +150,12 @@
                         </table>
                     </div>
                     <div class="form-group">
+                        <input type="hidden" class="customer_info_input" id="o_customer_id" value=""/>
                         <input type="hidden" id="o_product_ids" value=""/>
                         <input type="hidden" id="o_payment_method" value=""/>
                         <input type="hidden" id="o_total_price" value=""/>
                         <input type="hidden" id="o_pay_debt" value=""/>
-                        <div class="btn btn-primary pull-right"><?php echo __('LABEL_ORDER_SAVE');?></div>
+                        <div class="btn btn-primary pull-right" id="order_save"><?php echo __('LABEL_ORDER_SAVE');?></div>
                     </div>
                 </div>
             </div>
