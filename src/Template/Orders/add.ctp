@@ -3,6 +3,11 @@
     <div class="box box-primary">
         <div class="box-header with-border">
             <h3 class="box-title"><?php echo __('LABEL_PRODUCT_INFO');?></h3>
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                    <i class="fa fa-minus"></i>
+                </button>
+            </div>
         </div>
         <div class="box-body">
             <div class="col-md-6 order_wrapper">
@@ -65,6 +70,11 @@
                 <div class="box-header with-border">
                     <h3 class="box-title"><?php echo __('LABEL_ORDER_INFO');?></h3>
                     <button class="btn btn-primary pull-right" id="add_new_customer" title="<?php echo __('LABEL_ADD_NEW_CUSTOMER');?>">+</button>
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                            <i class="fa fa-minus"></i>
+                        </button>
+                    </div>
                 </div>
                 <div class="box-body">
                     <div class="customer_search form-group">
@@ -112,6 +122,11 @@
             <div class="box box-primary">
                 <div class="box-header with-border">
                     <h3 class="box-title"><?php echo __('LABEL_PAYMENT_INFO');?></h3>
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                            <i class="fa fa-minus"></i>
+                        </button>
+                    </div>
                 </div>
                 <div class="box-body">
                     <div class="table-responsive">

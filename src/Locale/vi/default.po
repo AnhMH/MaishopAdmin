@@ -219,3 +219,15 @@ msgstr "Thông tin sản phẩm"
 
 msgid "LABEL_PLACEHOLDER_NOTE"
 msgstr "Ghi chú..."
+
+msgid "LABEL_PLACEHOLDER_FULL_NAME"
+msgstr "Họ tên..."
+
+msgid "LABEL_PLACEHOLDER_TEL"
+msgstr "Số điện thoại..."
+
+msgid "LABEL_PLACEHOLDER_ADDRESS"
+msgstr "Địa chỉ..."
+
+msgid "LABEL_FULL_NAME"
+msgstr "Họ tên"

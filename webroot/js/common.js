@@ -248,7 +248,7 @@ function init_order() {
  * Render item
  */
 function item_render(id, name, price) {
-    return '<tr class="c_item" data-p-id="' + id + '"><td>' + name + '</td><td><input type="number" class="form-control input_number" value="1" min="1"/></td><td class="item_price">' + price + '</td><td class="item_total_price">' + price + '</td><td><button onclick="remove_item($(this))" class="btn btn-xs btn-danger"><i class="fa fa-trash-o"></i></button></td></tr>';
+    return '<tr class="c_item" data-p-id="' + id + '"><td>' + name + '</td><td><input data-p-id="'+id+'" data-p-price="'+price+'" type="number" class="form-control input_number o_input_product" value="1" min="1"/></td><td class="item_price">' + price + '</td><td class="item_total_price">' + price + '</td><td><button onclick="remove_item($(this))" class="btn btn-xs btn-danger"><i class="fa fa-trash-o"></i></button></td></tr>';
 }
 
 /*
@@ -352,13 +352,31 @@ function order_calculate() {
  */
 function order_save() {
     $('#order_save').on('click', function () {
+        var productData = [];
+        $(".o_input_product").each(function( i ) {
+            var pId = $(this).attr('data-p-id');
+            var pPrice = $(this).attr('data-p-price');
+            var qty = $(this).val();
+            var tmp = {
+                id: pId,
+                price: pPrice,
+                qty: qty
+            };
+            productData.push(tmp);
+        });
         var data = {
-            product_ids: $('#o_product_ids').val(),
+            product_data: productData,
             customer_id: $('#o_customer_id').val(),
+            sub_name: $('#o_customer_name').val(),
+            sub_address: $('#o_customer_tel').val(),
+            sub_tel: $('#o_customer_address').val(),
             payment_method: $('#o_payment_method').val(),
-            total_price: $('#o_total_price').val(),
+            ext_cost: 0,
+            ship_cost: 0,
+            total: $('.order_total').html(),
             pay_total: $('#o_pay_total').val(),
-            pay_debt: $('#o_pay_debt').val(),
+            pay_debt: $('.order_binding').html(),
+            note: $('#o_order_note').val()
         };
         $.ajax({
             type: "POST",
@@ -368,10 +386,16 @@ function order_save() {
                 if (response) {
                     // Show error
                     showAlertModal(response);
+                } else {
+                    window.location.href = baseUrl + '/orders';
                 }
             },
+            error: function () {
+                // Show error
+                showAlertModal('Đã có lỗi xảy ra, vui lòng thử lại.');
+            },
             complete: function () {
-                location.reload();
+//                location.reload();
             }
         });
     });

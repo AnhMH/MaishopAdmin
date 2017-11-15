@@ -141,3 +141,6 @@ td, th {
 .customer_info {
     display: none;
 }
+#add_new_customer {
+    margin-right: 30px;
+}
