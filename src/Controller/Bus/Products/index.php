@@ -76,11 +76,6 @@ $this->SimpleTable
             'empty' => ''
         ))
         ->addColumn(array(
-            'id' => 'description',
-            'title' => __('LABEL_DESCRIPTION'),
-            'empty' => ''
-        ))
-        ->addColumn(array(
             'id' => 'price',
             'title' => __('LABEL_PRICE'),
             'width' => 150,
@@ -90,6 +85,12 @@ $this->SimpleTable
             'id' => 'discount',
             'title' => __('LABEL_DISCOUNT'),
             'width' => 150,
+            'empty' => ''
+        ))
+        ->addColumn(array(
+            'id' => 'qty',
+            'title' => __('LABEL_QTY'),
+            'width' => 100,
             'empty' => ''
         ))
         ->addColumn(array(
