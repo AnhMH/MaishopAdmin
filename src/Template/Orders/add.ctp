@@ -132,7 +132,7 @@
                     <div class="table-responsive">
                         <table class="table">
                             <tbody>
-                                <tr>
+<!--                                <tr>
                                     <th style="width:40%"><?php echo __('LABEL_PAYMENT_METHOD');?>:</th>
                                     <td>
                                         <div class="form-group">
@@ -144,7 +144,7 @@
                                             </label>
                                         </div>
                                     </td>
-                                </tr>
+                                </tr>-->
                                 <tr>
                                     <th><?php echo __('LABEL_QTY');?>:</th>
                                     <td class="order_qty">0</td>

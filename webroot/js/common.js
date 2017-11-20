@@ -340,6 +340,7 @@ function order_calculate() {
     var td_total = $('.order_total');
     var qty = 0;
     var total = 0;
+    var pay_total = $('#o_pay_total').val();
     $('.item_total_price').each(function () {
         var value = parseInt($(this).html().replace(/,/g, ''));
         total += value;
@@ -352,6 +353,8 @@ function order_calculate() {
     td_total.html(commaSeparateNumber(total));
     td_qtv.html(qty);
     $('#o_total_price').val(total);
+    $('.order_binding').html(commaSeparateNumber(total - pay_total));
+    $('#o_pay_debt').val(total - pay_total);
 }
 
 /*
@@ -363,10 +366,10 @@ function order_pay() {
     $('#o_pay_total').on('keyup', function(){
         var total = parseInt($('#o_total_price').val());
         var val = $(this).val();
-        if (val > total) {
-            val = total;
-            $(this).val(val);
-        }
+//        if (val > total) {
+//            val = total;
+//            $(this).val(val);
+//        }
         debt.html(commaSeparateNumber(total - val));
         o_debt.val(total - val);
     });
@@ -380,7 +383,7 @@ function order_save() {
         var productData = [];
         $(".o_input_product").each(function( i ) {
             var pId = $(this).attr('data-p-id');
-            var pPrice = $(this).attr('data-p-price');
+            var pPrice = $(this).attr('data-p-price').replace(/,/g, '');
             var qty = $(this).val();
             var tmp = {
                 id: pId,
