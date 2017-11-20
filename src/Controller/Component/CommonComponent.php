@@ -165,4 +165,16 @@ class CommonComponent extends AppComponent {
         return $needle === "" || (($temp = strlen($haystack) - strlen($needle)) >= 0 && strpos($haystack, $needle, $temp) !== false);
     }
     
+    /**
+     * Currency format
+     * 
+     * @param int $number
+     * @return boolean|string
+     */
+    public function currencyFormat($number = 0) {
+        if (!is_numeric($number)) {
+            return false;
+        }
+        return number_format($number, 0, ',', '.');
+    }
 }

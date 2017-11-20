@@ -351,6 +351,9 @@ class SimpleTableHelper extends AppHelper {
                 if ($item['type'] == 'time') {
                     $value = date('H:i', $value);
                 }
+                if ($item['type'] == 'currency') {
+                    $value = self::getCommonComponent()->currencyFormat($value);
+                }
 
                 // KienNH 2016/06/16 begin
                 if ($item['type'] == 'time_second') {

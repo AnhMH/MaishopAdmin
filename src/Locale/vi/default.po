@@ -231,3 +231,15 @@ msgstr "Địa chỉ..."
 
 msgid "LABEL_FULL_NAME"
 msgstr "Họ tên"
+
+msgid "LABEL_ORDER_TOTAL"
+msgstr "Tổng tiền"
+
+msgid "LABEL_DETAIL"
+msgstr "Chi tiết"
+
+msgid "LABEL_ID"
+msgstr "ID"
+
+msgid "LABEL_ORDER_LIST"
+msgstr "Danh sách đơn hàng"

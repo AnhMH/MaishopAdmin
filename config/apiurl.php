@@ -28,3 +28,4 @@ Configure::write('API.url_products_addupdate', 'products/addupdate');
 Configure::write('API.url_products_all', 'products/all');
 
 Configure::write('API.url_orders_addupdate', 'orders/addupdate');
+Configure::write('API.url_orders_list', 'orders/list');
