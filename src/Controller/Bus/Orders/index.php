@@ -25,16 +25,8 @@ $this->SearchForm
             'label' => __('LABEL_NAME')
         ))
         ->addElement(array(
-            'id' => 'address',
-            'label' => __('LABEL_ADDRESS')
-        ))
-        ->addElement(array(
             'id' => 'tel',
             'label' => __('LABEL_TEL')
-        ))
-        ->addElement(array(
-            'id' => 'email',
-            'label' => __('LABEL_EMAIL')
         ))
         ->addElement(array(
             'id' => 'limit',
@@ -86,12 +78,12 @@ $this->SimpleTable
             'empty' => ''
         ))
         ->addColumn(array(
-            'id' => 'address',
+            'id' => 'sub_address',
             'title' => __('LABEL_ADDRESS'),
             'empty' => ''
         ))
         ->addColumn(array(
-            'id' => 'tel',
+            'id' => 'sub_tel',
             'title' => __('LABEL_TEL'),
             'empty' => ''
         ))
@@ -99,27 +91,34 @@ $this->SimpleTable
             'id' => 'total',
             'title' => __('LABEL_ORDER_TOTAL'),
             'type' => 'currency',
-            'width' => 130,
+            'width' => 120,
             'empty' => 0
         ))
         ->addColumn(array(
             'id' => 'pay_total',
             'title' => __('LABEL_PAY_TOTAL'),
             'type' => 'currency',
-            'width' => 130,
+            'width' => 120,
             'empty' => 0
         ))
         ->addColumn(array(
             'id' => 'pay_debt',
             'title' => __('LABEL_PAY_DEBT'),
             'type' => 'currency',
-            'width' => 130,
+            'width' => 120,
             'empty' => 0
+        ))
+        ->addColumn(array(
+            'id' => 'created',
+            'type' => 'dateonly',
+            'title' => __('LABEL_CREATED'),
+            'width' => 100,
+            'empty' => '',
         ))
         ->addColumn(array(
             'type' => 'link',
             'title' => __('LABEL_DETAIL'),
-            'href' => $this->BASE_URL . '/' . $this->controller . '/update/{id}',
+            'href' => $this->BASE_URL . '/' . $this->controller . '/detail/{id}',
             'button' => true,
             'width' => 50,
         ))

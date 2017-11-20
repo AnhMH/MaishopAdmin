@@ -90,3 +90,16 @@ function is_empty(str) {
     }
     return false;
 }
+
+/**
+ * Currency format
+ * 
+ * @param {String} str
+ * @returns {Boolean}
+ */
+function commaSeparateNumber(val){
+    while (/(\d+)(\d{3})/.test(val.toString())){
+      val = val.toString().replace(/(\d+)(\d{3})/, '$1'+','+'$2');
+    }
+    return val;
+}

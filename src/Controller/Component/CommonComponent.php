@@ -175,6 +175,6 @@ class CommonComponent extends AppComponent {
         if (!is_numeric($number)) {
             return false;
         }
-        return number_format($number, 0, ',', '.');
+        return number_format($number, 0, '.', ',');
     }
 }
