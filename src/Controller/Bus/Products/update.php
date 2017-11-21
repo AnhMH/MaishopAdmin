@@ -23,6 +23,8 @@ if (!empty($id)) {
     $pageTitle = __('LABEL_ADD_NEW');
 }
 
+$suppliers = $this->Common->arrayKeyValue(Api::call(Configure::read('API.url_suppliers_all'), array()), 'id', 'name');
+
 // Create breadcrumb
 $listPageUrl = h($this->BASE_URL . '/products');
 $this->Breadcrumb->setTitle($pageTitle)
@@ -51,6 +53,12 @@ $this->UpdateForm->reset()
         'required' => true,
     ))
     ->addElement(array(
+        'id' => 'supplier_id',
+        'label' => __('LABEL_SUPPLIER'),
+        'options' => $suppliers,
+        'empty' => '-'
+    ))
+    ->addElement(array(
         'id' => 'avatar',
         'label' => __('LABEL_AVATAR'),
         'image' => true,
@@ -61,8 +69,8 @@ $this->UpdateForm->reset()
         'label' => __('LABEL_PRICE'),
     ))
     ->addElement(array(
-        'id' => 'discount',
-        'label' => __('LABEL_DISCOUNT'),
+        'id' => 'qty',
+        'label' => __('LABEL_STOCK'),
     ))
     ->addElement(array(
         'id' => 'description',

@@ -243,3 +243,9 @@ msgstr "ID"
 
 msgid "LABEL_ORDER_LIST"
 msgstr "Danh sách đơn hàng"
+
+msgid "LABEL_SUPPLIER"
+msgstr "Nhà cung cấp"
+
+msgid "LABEL_STOCK"
+msgstr "Tồn kho"

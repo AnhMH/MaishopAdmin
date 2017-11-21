@@ -411,11 +411,11 @@ function order_save() {
             url: baseUrl + '/ajax/orderadd',
             data: data,
             success: function (response) {
-                if (response) {
-                    // Show error
-                    showAlertModal(response);
+                if (response.status == 'OK') {
+                    window.location.href = baseUrl + '/orders/detail/'+response.data;
                 } else {
-                    window.location.href = baseUrl + '/orders';
+                    // Show error
+                    showAlertModal('Error');
                 }
             },
             error: function () {
