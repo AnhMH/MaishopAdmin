@@ -109,12 +109,10 @@
     <!-- this row will not appear when printing -->
     <div class="row no-print">
         <div class="col-xs-12">
-            <a href="invoice-print.html" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
-            <button type="button" class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Submit Payment
-            </button>
-            <button type="button" class="btn btn-primary pull-right" style="margin-right: 5px;">
-                <i class="fa fa-download"></i> Generate PDF
-            </button>
+            <a href="#" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
+            <a href="<?php echo $BASE_URL;?>/orders/add/<?php echo $data['id']; ?>" class="btn btn-primary pull-right" style="margin-right: 5px;">
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i> <?php echo __('LABEL_ORDER_UPDATE');?>
+            </a>
         </div>
     </div>
 </section>

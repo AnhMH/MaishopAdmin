@@ -248,6 +248,8 @@ function init_order() {
     order_pay();
 
     order_save();
+    
+    order_calculate();
 }
 
 /*
@@ -404,7 +406,8 @@ function order_save() {
             total: $('#o_total_price').val(),
             pay_total: $('#o_pay_total').val(),
             pay_debt: $('#o_pay_debt').val(),
-            note: $('#o_order_note').val()
+            note: $('#o_order_note').val(),
+            id: $('#o_id').val()
         };
         $.ajax({
             type: "POST",
@@ -435,7 +438,6 @@ $(document).on('click touchend', function (e) {
     if (search_result.length > 0) {
         var customer_input = $('#customer_input');
         if (!customer_input.is(e.target) && !search_result.is(e.target) && search_result.has(e.target).length === 0) {
-            e.preventDefault();
             search_result.hide();
         }
     }

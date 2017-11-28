@@ -249,3 +249,12 @@ msgstr "Nhà cung cấp"
 
 msgid "LABEL_STOCK"
 msgstr "Tồn kho"
+
+msgid "LABEL_ORDER_UPDATE"
+msgstr "Cập nhật hóa đơn"
+
+msgid "LABEL_IMAGE"
+msgstr "Hình ảnh"
+
+msgid "LABEL_ORDER_DETAIL"
+msgstr "Chi tiết hóa đơn"

@@ -6,6 +6,13 @@ if (empty($type)) {
     $type = '1';
 }
 
+$data = array();
+if (!empty($id)) {
+    $data = Api::call(Configure::read('API.url_orders_detail'), array(
+        'id' => $id
+    ));
+}
+
 $param = array(
     'type' => $type
 );
@@ -14,5 +21,6 @@ $customers = Api::call(Configure::read('API.url_customers_all'), $param);
 
 $this->set(compact(
         'products',
-        'customers'
+        'customers',
+        'data'
 ));

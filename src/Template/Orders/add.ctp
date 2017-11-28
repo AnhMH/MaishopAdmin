@@ -58,7 +58,21 @@
                                 <th></th>
                             </tr>
                         </thead>
-                        <tbody id="cart_content"></tbody>
+                        <tbody id="cart_content">
+                            <?php if (!empty($data['products'])): ?>
+                            <?php foreach ($data['products'] as $p): ?>
+                            <tr class="c_item" data-p-id="<?php echo $p['product_id'];?>">
+                                <td><?php echo $p['product_name'];?></td>
+                                <td>
+                                    <input data-p-id="<?php echo $p['product_id'];?>" data-p-price="<?php echo $p['price'];?>" type="number" class="form-control input_number o_input_product" value="<?php echo $p['qty'];?>" min="1">
+                                </td>
+                                <td class="item_price"><?php echo number_format($p['price']);?></td>
+                                <td class="item_total_price"><?php echo number_format($p['qty']*$p['price']);?></td>
+                                <td><button onclick="remove_item($(this))" class="btn btn-xs btn-danger"><i class="fa fa-trash-o"></i></button></td>
+                            </tr>
+                            <?php endforeach; ?>
+                            <?php endif; ?>
+                        </tbody>
                     </table>
                 </div>
             </div>
@@ -97,23 +111,23 @@
                             <li class="customer_search_no_item"><?php echo __('MESSAGE_SEARCH_NO_RESULT');?></li>
                         </ul>
                     </div>
-                    <div class="customer_info">
+                    <div class="customer_info" <?php echo !empty($data['sub_name']) ? "style='display:block'" : "";?> >
                         <div class="form-group">
                             <label><?php echo __('LABEL_FULL_NAME'); ?></label>
-                            <input class="form-control customer_info_input" placeholder="<?php echo __('LABEL_PLACEHOLDER_FULL_NAME');?>" id="o_customer_name" value="" disabled="disabled"/>
+                            <input class="form-control customer_info_input" placeholder="<?php echo __('LABEL_PLACEHOLDER_FULL_NAME');?>" id="o_customer_name" value="<?php echo !empty($data['sub_name']) ? $data['sub_name'] : '';?>" disabled="disabled"/>
                         </div>
                         <div class="form-group">
                             <label><?php echo __('LABEL_TEL'); ?></label>
-                            <input class="form-control customer_info_input" placeholder="<?php echo __('LABEL_PLACEHOLDER_TEL');?>" id="o_customer_tel" value="" disabled="disabled"/>
+                            <input class="form-control customer_info_input" placeholder="<?php echo __('LABEL_PLACEHOLDER_TEL');?>" id="o_customer_tel" value="<?php echo !empty($data['sub_tel']) ? $data['sub_tel'] : '';?>" disabled="disabled"/>
                         </div>
                         <div class="form-group">
                             <label><?php echo __('LABEL_ADDRESS');?></label>
-                            <input class="form-control customer_info_input" placeholder="<?php echo __('LABEL_PLACEHOLDER_ADDRESS');?>" id="o_customer_address" value="" disabled="disabled"/>
+                            <input class="form-control customer_info_input" placeholder="<?php echo __('LABEL_PLACEHOLDER_ADDRESS');?>" id="o_customer_address" value="<?php echo !empty($data['sub_address']) ? $data['sub_address'] : '';?>" disabled="disabled"/>
                         </div>
                     </div>
                     <div class="form-group">
                         <label><?php echo __('LABEL_NOTE');?></label>
-                        <textarea class="form-control" rows="3" id="o_order_note" placeholder="<?php echo __('LABEL_PLACEHOLDER_NOTE');?>"></textarea>
+                        <textarea class="form-control" rows="3" id="o_order_note" placeholder="<?php echo __('LABEL_PLACEHOLDER_NOTE');?>"><?php echo !empty($data['note']) ? $data['note'] : '';?></textarea>
                     </div>
                 </div>
             </div>
@@ -155,7 +169,7 @@
                                 </tr>
                                 <tr>
                                     <th><?php echo __('LABEL_PAY_TOTAL');?>:</th>
-                                    <td><input type="text" id="o_pay_total" class="form-control" value="0"/></td>
+                                    <td><input type="text" id="o_pay_total" class="form-control" value="<?php echo !empty($data['pay_total']) ? $data['pay_total'] : 0; ?>"/></td>
                                 </tr>
                                 <tr>
                                     <th><?php echo __('LABEL_PAY_DEBT');?>:</th>
@@ -165,12 +179,13 @@
                         </table>
                     </div>
                     <div class="form-group">
-                        <input type="hidden" class="customer_info_input" id="o_customer_id" value=""/>
+                        <input type="hidden" class="customer_info_input" id="o_customer_id" value="<?php echo !empty($data['customer_id']) ? $data['customer_id'] : '';?>"/>
+                        <input type="hidden" id="o_id" value="<?php echo !empty($data['id']) ? $data['id'] : '';?>"/>
                         <input type="hidden" id="o_product_ids" value=""/>
                         <input type="hidden" id="o_payment_method" value=""/>
                         <input type="hidden" id="o_total_price" value=""/>
                         <input type="hidden" id="o_pay_debt" value=""/>
-                        <div class="btn btn-primary pull-right" id="order_save"><?php echo __('LABEL_ORDER_SAVE');?></div>
+                        <div class="btn btn-primary pull-right" id="order_save"><i class="fa fa-floppy-o" aria-hidden="true"></i> <?php echo __('LABEL_ORDER_SAVE');?></div>
                     </div>
                 </div>
             </div>
