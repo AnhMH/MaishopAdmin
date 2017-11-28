@@ -258,3 +258,12 @@ msgstr "Hình ảnh"
 
 msgid "LABEL_ORDER_DETAIL"
 msgstr "Chi tiết hóa đơn"
+
+msgid "LABEL_ORDER"
+msgstr "Hóa đơn"
+
+msgid "LABEL_MORE_INFO"
+msgstr "Xem thêm"
+
+msgid "LABEL_CUSTOMER"
+msgstr "Khách hàng"
