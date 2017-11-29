@@ -248,7 +248,7 @@ msgid "LABEL_SUPPLIER"
 msgstr "Nhà cung cấp"
 
 msgid "LABEL_STOCK"
-msgstr "Tồn kho"
+msgstr "SL tồn kho"
 
 msgid "LABEL_ORDER_UPDATE"
 msgstr "Cập nhật hóa đơn"
@@ -267,3 +267,6 @@ msgstr "Xem thêm"
 
 msgid "LABEL_CUSTOMER"
 msgstr "Khách hàng"
+
+msgid "LABEL_SELL_QTY"
+msgstr "SL đã bán"
